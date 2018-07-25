@@ -5,8 +5,8 @@
 MODULE_LICENSE("Dual BSD/GPL");
 
 static char *whom = "world_p";
-static u32 howmany = 1;
-module_param(howmany, int, S_IRUGO);
+static uint howmany = 1;
+module_param(howmany, uint, S_IRUGO);
 module_param(whom, charp, S_IRUGO);
 
 static int hello_init(void)
