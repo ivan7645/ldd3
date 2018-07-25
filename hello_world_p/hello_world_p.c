@@ -4,9 +4,17 @@
 
 MODULE_LICENSE("Dual BSD/GPL");
 
+static char *whom = "world_p";
+static u32 howmany = 1;
+module_param(howmany, int, S_IRUGO);
+module_param(whom, charp, S_IRUGO);
+
 static int hello_init(void)
 {
-	printk(KERN_ALERT "Hello, world\n");
+	u32 i;
+
+	for (i = 0; i < howmany; i++)
+		printk(KERN_ALERT "Hello, %s\n", whom);
 
 	printk(KERN_INFO "The current precess is \"%s\" (pid %i)\n",
 	       current->comm, current->pid);
@@ -16,8 +24,10 @@ static int hello_init(void)
 
 static void hello_exit(void)
 {
-	printk(KERN_ALERT "Goodbye, cruel world\n");
+	printk(KERN_ALERT "Goodbye, cruel world_p\n");
 }
+
+MODULE_LICENSE("Dual BSD/GPL");
 
 module_init(hello_init);
 module_exit(hello_exit);
