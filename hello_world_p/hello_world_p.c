@@ -27,7 +27,5 @@ static void hello_exit(void)
 	printk(KERN_ALERT "Goodbye, cruel world_p\n");
 }
 
-MODULE_LICENSE("Dual BSD/GPL");
-
 module_init(hello_init);
 module_exit(hello_exit);
