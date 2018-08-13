@@ -9,8 +9,8 @@
 
 ### hello_world\_p
 	make
-	insmod hello_world.ko 
-	rmmod hello_word.ko
+	insmod hello_world_p.ko 
+	rmmod hello_word_p.ko
 	
 ### scull
 	make
