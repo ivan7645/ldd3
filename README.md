@@ -4,13 +4,13 @@
 
 ### hello_world
 	make
-	insmod hello_world.ko
-	rmmod hello_word.ko
+	sudo insmod hello_world.ko
+	sudo rmmod hello_word.ko
 
 ### hello_world\_p
 	make
-	insmod hello_world_p.ko 
-	rmmod hello_word_p.ko
+	sudo insmod hello_world_p.ko 
+	sudo rmmod hello_word_p.ko
 	
 ### scull
 	make
